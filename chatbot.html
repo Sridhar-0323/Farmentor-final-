@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Chatbot - FarmMentor</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="glass-panel">
+        <a href="index.html" class="logo">
+            <span>🌱</span> FarmMentor
+        </a>
+        <div class="nav-links">
+            <a href="index.html" data-i18n="nav_home">Home</a>
+            <a href="weather.html" data-i18n="nav_weather">Weather</a>
+            <a href="market.html" data-i18n="nav_market">Market</a>
+            <a href="news.html" data-i18n="nav_news">News</a>
+            <a href="chatbot.html" class="active" data-i18n="nav_chatbot">AI Support</a>
+            <select id="langSelector" class="lang-selector" onchange="changeLanguage(this.value)">
+                <option value="en">English</option>
+                <option value="ta">தமிழ் (Tamil)</option>
+                <option value="hi">हिन्दी (Hindi)</option>
+                <option value="te">తెలుగు (Telugu)</option>
+            </select>
+        </div>
+    </nav>
+
+    <div class="container">
+        <header class="page-header">
+            <h1 data-i18n="card_chatbot_title">AI Chatbot Support</h1>
+            <p data-i18n="chat_header_desc">Ask our AI assistant for farming advice.</p>
+        </header>
+
+        <main>
+            <div class="chat-container glass-panel">
+                <div class="chat-messages" id="chatMessages">
+                    <div class="message bot" data-i18n="chat_welcome">
+                        Hello! I am FarmMentor AI. Ask me about irrigation advice, crop selection tips, or weather planning guidance.
+                    </div>
+                </div>
+                <div class="chat-input-area">
+                    <input type="text" id="chatInput" placeholder="Type your farming question here..." data-i18n="chat_placeholder">
+                    <button class="btn" onclick="sendChatMessage()" data-i18n="btn_send">Send</button>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="translations.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

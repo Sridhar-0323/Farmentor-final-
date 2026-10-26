@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agricultural News - FarmMentor</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="glass-panel">
+        <a href="index.html" class="logo">
+            <span>🌱</span> FarmMentor
+        </a>
+        <div class="nav-links">
+            <a href="index.html" data-i18n="nav_home">Home</a>
+            <a href="weather.html" data-i18n="nav_weather">Weather</a>
+            <a href="market.html" data-i18n="nav_market">Market</a>
+            <a href="news.html" class="active" data-i18n="nav_news">News</a>
+            <a href="chatbot.html" data-i18n="nav_chatbot">AI Support</a>
+            <select id="langSelector" class="lang-selector" onchange="changeLanguage(this.value)">
+                <option value="en">English</option>
+                <option value="ta">தமிழ் (Tamil)</option>
+                <option value="hi">हिन्दी (Hindi)</option>
+                <option value="te">తెలుగు (Telugu)</option>
+            </select>
+        </div>
+    </nav>
+
+    <div class="container">
+        <header class="page-header">
+            <h1 data-i18n="card_news_title">Agricultural News</h1>
+            <p data-i18n="news_header_desc">Stay updated with the latest in farming and agriculture.</p>
+        </header>
+
+        <main>
+            <div class="input-group glass-panel" style="padding: 1rem; border-radius: 50px;">
+                <input type="text" id="newsInput" placeholder="Search news (e.g. tractors, fertilizers)..." data-i18n="news_placeholder">
+                <button class="btn" onclick="fetchNews()" data-i18n="btn_search">Search</button>
+            </div>
+
+            <div id="newsLoader" class="loader"></div>
+
+            <div id="newsGrid" class="news-grid">
+                <!-- Data populated by JS -->
+            </div>
+        </main>
+    </div>
+
+    <script src="translations.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

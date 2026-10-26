@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FarmMentor Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="glass-panel">
+        <a href="index.html" class="logo">
+            <span>🌱</span> FarmMentor
+        </a>
+        <div class="nav-links">
+            <a href="index.html" class="active" data-i18n="nav_home">Home</a>
+            <a href="weather.html" data-i18n="nav_weather">Weather</a>
+            <a href="market.html" data-i18n="nav_market">Market</a>
+            <a href="news.html" data-i18n="nav_news">News</a>
+            <a href="chatbot.html" data-i18n="nav_chatbot">AI Support</a>
+            <select id="langSelector" class="lang-selector" onchange="changeLanguage(this.value)">
+                <option value="en">English</option>
+                <option value="ta">தமிழ் (Tamil)</option>
+                <option value="hi">हिन्दी (Hindi)</option>
+                <option value="te">తెలుగు (Telugu)</option>
+            </select>
+        </div>
+    </nav>
+
+    <div class="container">
+        <header class="page-header">
+            <h1 data-i18n="welcome_title">Welcome to FarmMentor</h1>
+            <p data-i18n="welcome_desc">Your AI-Based Query Support and Advisory Application</p>
+        </header>
+
+        <main class="dashboard-grid">
+            <a href="weather.html" class="card glass-panel">
+                <div class="card-icon">🌤️</div>
+                <h2 data-i18n="card_weather_title">Weather Updates</h2>
+                <p data-i18n="card_weather_desc">Get real-time weather forecasts to plan your farming activities better.</p>
+            </a>
+
+            <a href="market.html" class="card glass-panel">
+                <div class="card-icon">📊</div>
+                <h2 data-i18n="card_market_title">Market Prices</h2>
+                <p data-i18n="card_market_desc">Check the latest market prices for crops to maximize your profits.</p>
+            </a>
+
+            <a href="news.html" class="card glass-panel">
+                <div class="card-icon">📰</div>
+                <h2 data-i18n="card_news_title">Agricultural News</h2>
+                <p data-i18n="card_news_desc">Stay updated with the latest news, trends, and farming innovations.</p>
+            </a>
+
+            <a href="chatbot.html" class="card glass-panel">
+                <div class="card-icon">🤖</div>
+                <h2 data-i18n="card_chatbot_title">AI Chatbot</h2>
+                <p data-i18n="card_chatbot_desc">Ask questions and get instant, AI-driven agricultural advice.</p>
+            </a>
+        </main>
+    </div>
+
+    <script src="translations.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
